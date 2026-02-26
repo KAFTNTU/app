@@ -2,19 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.roboscratch.app">
 
-    <!-- Legacy Bluetooth permissions (Android 11 and below) -->
     <uses-permission android:name="android.permission.BLUETOOTH"
         android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
         android:maxSdkVersion="30" />
-
-    <!-- Android 12+ BLE permissions -->
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
-        android:usesPermissionFlags="neverForLocation"
-        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-
-    <!-- Location needed for BLE scan on Android 11 and below -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -27,8 +20,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoboScratch"
-        android:hardwareAccelerated="true"
-        xmlns:tools="http://schemas.android.com/tools">
+        android:hardwareAccelerated="true">
 
         <activity
             android:name=".MainActivity"
